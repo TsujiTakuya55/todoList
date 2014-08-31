@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+	<head>	
+		<meta charset="utf-8">
+		<title>BackBoneJsの練習</title>
+	</head>
+	
+	<style>
+		.completed{
+			text-decoration: line-through;
+			color: gray;
+		}
+	</style>
+	<body>
+	
+		<h1>Tasks</h1>
+		
+		<form id="addTask">
+			<input type="text" id="title">
+			<input type="submit" value="add">
+			<spna id="error"></spna>
+		</form>
+		
+		<div id="tasks">
+		</div>
+		
+		<p>残りのタスク：<span id="count"></span></p>
+		
+		<script type="text/template" id="task-template">
+			<input type="checkbox" class="toggle" <%= completed ? 'checked':' '%>>
+			
+			<span class="<%= completed ? 'completed' : ''%>">
+				<%- title %>
+			</spna>
+			
+			<span class="delete">[✗]</span>
+		</script>
+		
+		<script src="js/underscore.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/backbone.js"></script>
+		<script src="js/app.js"></script>
+		
+		
+		
+	
+	</body>
+</html>
